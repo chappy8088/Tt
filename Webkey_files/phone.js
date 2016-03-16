@@ -553,6 +553,14 @@ PhoneController.prototype = {
             self.resetScreen();
         });
 
+        $('.soft-keyboard button').on('click', function (e) {
+          var key = $(this).html();
+          if (key.length !== 1) {
+            key = ' ';
+          }
+          self.API.sendKeyEvent("PRESS", key);
+        });
+
         var updateProgressBar = function(alpha) {
             if (!self.runUpdateProgressBar) {
                 return;
