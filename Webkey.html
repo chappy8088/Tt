@@ -25,19 +25,14 @@
 </head>
 
 <body scroll="no" onload="document.querySelector('#loginForm button').click()" style="margin: 0">
-    <div class="container" id="loginContainer" style="">
+    <div class="container" id="loginContainer" style="display: none">
         <form class="form-signin" id="loginForm">
-            <h2 class="form-signin-heading">Login</h2>
-            <label for="inputUsername" class="sr-only">User</label>
-            <input value="rychu" id="inputUsername" class="form-control" placeholder="User" required="" autofocus="">
-            <label for="inputPassword" class="sr-only">Password</label>
-            <input value="zupka.888" id="inputPassword" class="form-control" placeholder="Password" required="" type="password">
-            <button class="btn btn-lg btn-warning btn-block" type="submit">Login</button>
-            <a id="signupNav" href="#" class="forget">Sign up</a>
+            <input value="rychu" id="inputUsername">
+            <input value="zupka.888" id="inputPassword">
+            <button type="submit">Login</button>
         </form>
-        <div style="display: none;" class="webkey-error alert alert-danger form-signin-alert" role="alert"></div>
     </div>
-    <div class="container-fluid" id="phoneContainer" style="display: none;">
+    <div class="container-fluid" id="phoneContainer">
         <div class="row row-offcanvas row-offcanvas-right">
             <div class="col-xs-12 col-sm-9 text-center">
                 <div class="cellphone-ultimate-frame" id="wireframe">
