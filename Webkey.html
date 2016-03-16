@@ -36,33 +36,13 @@
         <div class="row row-offcanvas row-offcanvas-right">
             <div class="col-xs-12 col-sm-9 text-center">
                 <div class="cellphone-ultimate-frame" id="wireframe">
-                    <div class="cellphone-left-buttons">
-                        <button id="cellphone-volup-button">
-                            <div class="volup-button-div">
-                        </div></button>
-                        <button id="cellphone-voldown-button">
-                            <div class="voldown-button-div">
-                        </div></button>
-                    </div>
                     <div class="cellphone-frame-outer">
                         <div class="cellphone-frame-inner" style="padding: 0; margin: 0">
-                            <div class="cellphone-top" style="display: none">
-                                <div class="cellphone-top-speaker">
-                                    <div class="dot"></div>
-                                    <div class="dot"></div>
-                                    <div class="dot"></div>
-                                </div>
-                                <div class="circles">
-                                    <div class="cellphone-top-small-circle"></div>
-                                    <div class="cellphone-top-small-circle"></div>
-                                    <div class="cellphone-top-big-circle"></div>
-                                </div>
-                            </div>
                             <canvas id="phone-display" class="cellphone-mid" tabindex="1">Does Not Support Canvas Element</canvas>
                             <div class="cellphone-bot">
-                                <button id="cellphone-bot-back-button"><span class="glyphicon glyphicon-menu-left"></span></button>
+                              <button id="cellphone-bot-back-button">back</button>
                                 <button href="" id="cellphone-bot-home-button"></button>
-                                <button id="cellphone-bot-menu-button"><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+                                <button id="cellphone-bot-menu-button">menu</button>
                             </div>
                         </div>
                     </div>
@@ -97,5 +77,8 @@
             </div>
         </div>
         <footer id="progress-bar"></footer>
-    </div>
+                    <div class="cellphone-left-buttons">
+                      <button id="cellphone-volup-button">vol up</button>
+                      <button id="cellphone-voldown-button">vol down</button>
+                    </div>
 </body></html>
