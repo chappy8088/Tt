@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html><head>
+    <title>Webkey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="Webkey_files/bootstrap.css-not" rel="stylesheet">
+    <link href="Webkey_files/jquery.css" rel="stylesheet">
+    <link href="Webkey_files/webkey.css" rel="stylesheet">
+    <link href="Webkey_files/phone.css" rel="stylesheet">
+    <link href="Webkey_files/offcanvas.css" rel="stylesheet">
+    <link href="Webkey_files/login.css" rel="stylesheet">
+    <script src="Webkey_files/jquery.js"></script> <!-- 2.0.3 -->
+    <script src="Webkey_files/location.js"></script>
+    <script src="Webkey_files/webkeyapi.js"></script>
+    <script src="Webkey_files/webkey.js"></script>
+    <script src="Webkey_files/login.js"></script>
+    <script src="Webkey_files/signup.js"></script>
+    <script src="Webkey_files/phone.js"></script>
+    <script src="Webkey_files/ready.js"></script>
+    <script src="Webkey_files/bootstrap.js"></script>
+    <script src="Webkey_files/jquery_002.js"></script>
+    <script src="Webkey_files/spin.js"></script><style type="text/css"></style>
+    <link href="Webkey_files/leaflet.css" rel="stylesheet"> <!-- 0.7.7 -->
+    <script src="Webkey_files/leaflet.js"></script>
+    <script type="text/javascript">var WS_PORT=":8081";</script>
+</head>
+
+<body scroll="no" onload="document.querySelector('#loginForm button').click()" style="margin: 0">
+    <div class="navbar navbar-default navbar-static-top" role="navigation" style="display: none">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://webkey.cc/">Webkey</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse ">
+            <ul class="nav navbar-nav ">
+                <li id="phoneNav" class="loggedIn" style="display: none;"><a href="#"><i class="glyphicon glyphicon-phone"></i>  Phone</a>
+                </li>
+                <li id="locationNav" class="loggedIn" style="display: none;"><a href="#"><i class="glyphicon glyphicon-map-marker"></i>  GPS</a>
+                </li>
+               <!--  <li id="filesNav" class="loggedIn" style="display: none;"><a href="#"><i class="glyphicon glyphicon-folder-open"></i>  Files</a>
+                </li>
+                <li id="termNav" class="loggedIn" style="display: none;"><a href="#"><i class="glyphicon glyphicon-unchecked"></i> Terminal</a>
+                </li> -->
+            </ul>
+        </div>
+    </div>
+    <div class="container" id="loginContainer" style="">
+        <form class="form-signin" id="loginForm">
+            <h2 class="form-signin-heading">Login</h2>
+            <label for="inputUsername" class="sr-only">User</label>
+            <input value="username" id="inputUsername" class="form-control" placeholder="User" required="" autofocus="">
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input value="password" id="inputPassword" class="form-control" placeholder="Password" required="" type="password">
+            <button class="btn btn-lg btn-warning btn-block" type="submit">Login</button>
+            <a id="signupNav" href="#" class="forget">Sign up</a>
+        </form>
+        <div style="display: none;" class="webkey-error alert alert-danger form-signin-alert" role="alert"></div>
+    </div>
+    <div class="container" id="signupContainer" style="display: none;">
+        <form class="form-signin" id="signUpForm">
+            <h2 class="form-signin-heading">Sign up</h2>
+            <label for="inputUsernameSu" class="sr-only">User</label>
+            <input value="rychu" id="inputUsernameSu" class="form-control" placeholder="User" required="" autofocus="">
+            <label for="inputPasswordSu" class="sr-only">Password</label>
+            <input id="inputPasswordSu" class="form-control" placeholder="Password" required="" type="password">
+            <label for="inputConfirmPasswordSu" class="sr-only">Confirm password</label>
+            <input id="inputConfirmPasswordSu" class="form-control" placeholder="Confirm password" required="" type="password">
+            <button class="btn btn-lg btn-warning btn-block" type="submit">Sign up</button>
+            <a id="loginNav" href="#" class="forget">Login</a>
+        </form>
+        <div style="display: none;" class="webkey-error alert alert-danger form-signin-alert" role="alert"></div>
+    </div>
+    <div class="container-fluid" id="locationContainer" style="display: none;">
+        <div id="map" style="width: 100%; height: 440px; border: 1px solid #AAA;"></div>
+    </div>
+    <div class="container-fluid" id="phoneContainer" style="display: none;">
+        <div class="row row-offcanvas row-offcanvas-right">
+            <div class="col-xs-12 col-sm-9 text-center">
+                <div class="cellphone-ultimate-frame" id="wireframe">
+                    <div class="cellphone-left-buttons">
+                        <button id="cellphone-volup-button">
+                            <div class="volup-button-div">
+                        </div></button>
+                        <button id="cellphone-voldown-button">
+                            <div class="voldown-button-div">
+                        </div></button>
+                    </div>
+                    <div class="cellphone-frame-outer">
+                        <div class="cellphone-frame-inner" style="padding: 0; margin: 0">
+                            <div class="cellphone-top" style="display: none">
+                                <div class="cellphone-top-speaker">
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                    <div class="dot"></div>
+                                </div>
+                                <div class="circles">
+                                    <div class="cellphone-top-small-circle"></div>
+                                    <div class="cellphone-top-small-circle"></div>
+                                    <div class="cellphone-top-big-circle"></div>
+                                </div>
+                            </div>
+                            <canvas id="phone-display" class="cellphone-mid" tabindex="1">Does Not Support Canvas Element</canvas>
+                            <div class="cellphone-bot">
+                                <button id="cellphone-bot-back-button"><span class="glyphicon glyphicon-menu-left"></span></button>
+                                <button href="" id="cellphone-bot-home-button"></button>
+                                <button id="cellphone-bot-menu-button"><span class="glyphicon glyphicon-menu-hamburger"></span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="cellphone-power-button" style="display: none">
+                        <div class="power-button-div">
+                    </div></button>
+                 </div>
+            </div>
+
+            <div class="col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation" style="display: none">
+                <div class="well sidebar-nav">
+                    <ul class="nav">
+                            <li>
+                                <div class="checkbox">
+                                    <label>
+                                        <input id="fliptouch" type="checkbox">Flip touch</label>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="checkbox">
+                                    <label>
+                                        <input id="mirrortouch" type="checkbox">Mirror touch</label>
+                                </div>
+                            </li>
+
+                            <li>Quality:
+                                <input id="quality" min="10" max="100" value="80" type="range">
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <footer id="progress-bar"></footer>
+    </div>
+
+
+
+</body></html>

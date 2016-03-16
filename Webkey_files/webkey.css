@@ -1,0 +1,25 @@
+.navbar-brand {
+    background-color: #f58400;
+}
+
+.navbar-default .navbar-brand:hover{
+    background-color: #f58400;
+}
+
+.navbar-default .navbar-brand {
+    color: #ffffff;
+}
+
+.navbar-default .navbar-brand:hover {
+    color: #ffffff;
+}
+
+#progress-bar {
+    background-color: #b0c4de;
+    position: fixed;
+    bottom:0;
+    height: 4px;
+    width:100%;
+    padding:0px;
+    margin-left: -15px;
+}

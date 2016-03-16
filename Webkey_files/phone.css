@@ -1,0 +1,203 @@
+    .elso {
+        border: 1px solid black;
+    }
+    /**/
+    
+    .navbar {
+        margin-bottom: 11px;
+    }
+    
+    .cellphone-ultimate-frame {
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -o-user-select: none;
+        -moz-transition-duration: 0.5s;
+        -webkit-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+        transition-duration: 0.5s;
+        display: inline-block;
+
+    }
+
+    .cellphone-left-buttons {
+        float: left;
+        /* csak az egymas ala rendezes miatt*/
+        
+        width: 1px;
+        height: 180px;
+        margin: 180px -1px 0px 0px;
+    }
+    
+    #cellphone-volup-button {
+        float: right;
+        margin: 0px 0px 2px 0px;
+        /* hitbox's size */
+        
+        padding: 0px 0px 0px 5px;
+        display: block;
+    }
+    
+    .volup-button-div {
+        border: 1px solid black;
+        border-radius: 5em 0em 0em 0em;
+        width: 4px;
+        height: 52px;
+        display: block;
+    }
+    
+    #cellphone-voldown-button {
+        float: right;
+        margin: 1px 0px 0px 0px;
+        /* hitbox's size */
+        
+        padding: 0px 0px 0px 5px;
+        display: block;
+    }
+    
+    .voldown-button-div {
+        border: 1px solid black;
+        border-radius: 0em 0em 0em 5em;
+        width: 4px;
+        height: 52px;
+        display: block;
+    }
+    /*----------------*/
+    
+    #cellphone-power-button {
+        display: inline-block;
+        border: 0px solid red;
+        float: right;
+        margin: 180px 20px 20px -1px;
+        /* hitbox's size */
+        
+        padding: 0px 5px 0px 0px;
+    }
+    
+    .power-button-div {
+        float: right;
+        border: 1px solid black;
+        border-radius: 0em 5em 5em 0em;
+        width: 4px;
+        height: 62px;
+    }
+    
+    .cellphone-frame-outer {
+        border: 1px solid black;
+        border-radius: 124px/55px;
+        display: inline-block;
+    }
+    
+    .cellphone-frame-inner {
+        border: 1px solid black;
+        border-radius: 114px/55px;
+        margin: 4px 4px 6px 4px;
+        padding-left: 17px;
+        padding-right: 17px;
+        display: inline-block;
+    }
+    
+    .cellphone-top {
+        padding-top: 11px;
+        margin-bottom: 8px;
+    }
+    
+    .cellphone-top-speaker {
+        border: 1px solid black;
+        margin: 0 auto;
+        width: 96px;
+        height: 10px;
+        border-radius: 11px/10px;
+    }
+    
+    .circles {
+        margin-left: 60%;
+    }
+    
+    .cellphone-top-big-circle {
+        width: 25px;
+        height: 25px;
+        border-radius: 15px;
+        border: 1px solid black;
+        display: inline-block;
+        margin-left: 15%;
+    }
+    
+    .cellphone-top-small-circle {
+        width: 16px;
+        height: 16px;
+        border-radius: 10px;
+        border: 1px solid black;
+        display: inline-block;
+        margin-bottom: 3px;
+    }
+    
+    .cellphone-mid {
+        border: 1px solid black;
+        width: 300px;
+        height: 300px;
+    }
+    
+    div.cellphone-mid {
+        vertical-align: middle;
+        display: table-cell;
+        color: rgb(0, 0, 0);
+        background-color: rgb(240, 240, 240);
+        /*background-image: linear-gradient(rgb(252, 248, 227) 0px, rgb(248, 239, 192) 100%);*/
+        
+        background-repeat: repeat-x;
+    }
+    
+    .cellphone-bot {
+        height: 54px;
+        padding-top: 15px;
+        text-align: center;
+    }
+    
+    #cellphone-bot-back-button {
+        margin: 0 auto;
+        width: 70px;
+        height: 20px;
+        display: inline-block;
+    }
+    
+    #cellphone-bot-home-button {
+        border: 2px solid black;
+        margin: 0 auto;
+        width: 70px;
+        height: 20px;
+        border-radius: 1em 1em 4em 4em;
+        display: inline-block;
+    }
+    
+    #cellphone-bot-menu-button {
+        margin: 0 auto;
+        width: 70px;
+        height: 20px;
+        display: inline-block;
+    }
+    
+    .cellphone-ultimate-frame button {
+        border: none;
+        background: none;
+        color: #000000;
+        font-size: 1.1em;
+    }
+    
+    .cellphone-ultimate-frame button:focus {
+        border: none;
+        background: none;
+        color: #000000;
+        outline: none;
+    }
+    
+    .cellphone-ultimate-frame:active {
+        border-color: #ffffff;
+        color: #ffffff;
+        box-shadow: none;
+    }
+
+    #locationContainer {
+        padding: 0px;
+        margin-top: -20px;
+    }
